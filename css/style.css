@@ -1,0 +1,1245 @@
+html, body{
+	font-family: "Montserrat";
+}
+
+/*------------------------------- PRELOADERS -------------------------------*/
+.load{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background: rgba(255,255,255,1);
+	z-index: 3;
+}
+
+/*------------------------------- MENU -------------------------------*/
+header{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	z-index: 2;
+}
+
+header .nav{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin: 5vh 0;
+	font-family: Montserrat;
+}
+
+/*------------------------------- MENU - DESKTOP -------------------------------*/
+header .nav li{
+	margin: 0 15px;
+	padding: 10px 15px;
+}
+
+header .nav li:nth-child(1){
+	margin: 0 15px 0 0;
+}
+
+header .nav li:nth-child(6){
+	margin: 0 0 0 15px;
+}
+
+header .nav li.ativo{
+	border-left: 2px solid rgba(0,190,190,1);
+	border-right: 2px solid rgba(0,190,190,1);
+	border-radius: 1px;
+	transition: .3s all;
+}
+
+header .nav li.ativo a{
+	color: rgba(0,190,190,1);
+}
+
+header .nav li a{
+	font-family: "Montserrat";
+	font-size: .8rem;
+	color: rgba(255,255,255,1);
+	text-transform: uppercase;
+	transition: .3s all;
+}
+
+header .nav li a:hover{
+	color: rgba(200,200,200,1);
+}
+
+header .nav li.ativo:hover{
+	border-left: 2px solid rgba(0,190,190,.7);
+	border-right: 2px solid rgba(0,190,190,.7);
+	cursor: pointer;
+}
+
+header .nav li.ativo:hover a{
+	color: rgba(0,190,190,.7);
+}
+
+header .fixed-action-btn{
+	display: none;
+	opacity: .8;
+	transition: .5s all;
+}
+
+header .fixed-action-btn:hover{
+	opacity: 1;
+}
+
+header .fixed-action-btn .btn-floating i{
+	background: rgba(0,150,150,1);
+	transition: .3s all;
+}
+
+header .button-collapse{
+	position: fixed;
+	margin: 5%;
+}
+
+header .button-collapse i{
+	font-size: 2rem;
+	color: rgba(0,190,190,1);
+	background: rgba(51,51,51,.1);
+	padding: 5px 15px;
+	border-radius: 10px;
+}
+
+/*------------------------------- MENU - MOBILE -------------------------------*/
+#mobile-demo{
+	width: 250px;
+	font-family: "Montserrat";
+}
+
+#mobile-demo li a{
+	transition: .3s all;
+}
+
+#mobile-demo li:hover a{
+	background: transparent;
+	border-left: 2px solid rgba(0,190,190,1);
+}
+
+#mobile-demo li:nth-child(1){
+	margin-top: 10px;
+}
+
+#mobile-demo li.ativo{
+	border-left: 2px solid rgba(0,190,190,1);
+}
+
+#mobile-demo li.ativo a{
+	color: rgba(0,190,190,1);
+}
+
+#mobile-demo li.ativo a:hover{
+	border-left: none;
+}
+
+#mobile-demo li.ativo a i{
+	color: rgba(0,190,190,1);
+}
+
+#mobile-demo li::after{
+	content: "";
+	display: flex;
+	margin-left: 50%;
+	transform: translateX(-50%); 
+	width: 80%;
+	height: 1px;
+	background: rgba(51,51,51,.1);
+}
+
+/*------------------------------- HOME -------------------------------*/
+#home{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background: url(../img/bg-home.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.home .descricao{
+	width: 80%;
+	color: rgba(255,255,255,1);
+	text-align: center;
+}
+
+.home .descricao h1{
+	font-size: 3.1rem;
+	margin-bottom: 50px;
+	line-height: 1;
+}
+
+.home .descricao p{
+	font-size: 1rem;
+	margin-bottom: 50px;
+}
+
+.home a{
+	color: rgba(0,220,220,1);
+	padding: 10px;
+	border: 2px solid rgba(0,220,220,1);
+	border-radius: 100px;
+}
+
+.home a i{
+	font-size: 2rem;
+	transition: .5s all;
+}
+
+.home a:hover i{
+	transform: rotate(360deg);
+}
+
+
+/*------------------------------- QUEM SOMOS -------------------------------*/
+#quem-somos{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5%;
+}
+
+.quem-somos .conteudo{
+	width: 50%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+	padding: 5% 5% 0 0;
+}
+
+.quem-somos .conteudo h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.quem-somos .conteudo h1::after{
+	content: "";
+	width: 50px;
+	height: 3px;
+	display: flex;
+	background: rgba(0,150,150,1);
+	margin-top: 5px;
+}
+
+.quem-somos .conteudo p{
+	text-align: justify;
+}
+
+.quem-somos .conteudo .modal{
+	width: 90%;
+	height: 1000px!important;
+}
+
+.quem-somos .logo{
+	width: 50%;
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background: rgba(240,240,240,1);
+	border-radius: 10px;
+}
+
+.quem-somos .logo img{
+	width: 300px;
+	height: 300px;
+}
+
+.quem-somos .colaboradores{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+}
+
+.quem-somos .colaboradores h3{
+	font-size: 1rem;
+	color: rgba(190,190,190,1);
+	text-transform: uppercase;
+	margin-bottom: 5%;
+}
+
+.quem-somos .colaboradores .container{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.quem-somos .colaboradores .container .img{
+	width: 49%;
+	height: 300px;
+	background-size: cover!important;
+	background-position: 50%!important;
+	background-repeat: no-repeat!important;
+	overflow: hidden!important;
+	margin-bottom: 2%;
+}
+
+.quem-somos .colaboradores .container .img:nth-child(1){
+	background: url(../img/colaboradores-1.jpg);
+}
+
+.quem-somos .colaboradores .container .img:nth-child(2){
+	background: url(../img/colaboradores-2.jpg);
+}
+
+.quem-somos .colaboradores .container .img:nth-child(3){
+	background: url(../img/colaboradores-3.jpg);
+}
+
+.quem-somos .colaboradores .container .img:nth-child(4){
+	background: url(../img/colaboradores-4.jpg);
+}
+
+.quem-somos .colaboradores .container .img:nth-child(5){
+	background: url(../img/colaboradores-5.jpg);
+}
+
+.quem-somos .colaboradores .container .img:nth-child(6){
+	background: url(../img/colaboradores-6.jpg);
+}
+
+.quem-somos .colaboradores .container .img:hover .descricao{
+	transform: translateY(0px);
+}
+
+.quem-somos .colaboradores .container .img .descricao{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: rgba(0,150,150,1);
+	transform: translateX(-90%);
+	padding: 60px;
+	transition: .5s all ease;
+}
+
+.quem-somos .colaboradores .container .img .descricao h3{
+	font-size: 1.5rem;
+	color: rgba(51,51,51,1);
+	text-transform: none;
+	margin: 0 0 5px 0;
+}
+
+.quem-somos .colaboradores .container .img .descricao p{
+	color: rgba(220,220,220,1);
+	margin-bottom: 50px;
+}
+
+.quem-somos .colaboradores .container .img .descricao blockquote{
+	font-size: 1.1rem;
+	color: rgba(255,255,255,1);
+	text-align: justify;
+	border-color: rgba(51,51,51,1);
+}
+
+/*------------------------------- ESTATUTO-IDOSO -------------------------------*/
+#estatuto-idoso{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background: url(../img/bg-estatuto-idoso.jpg);
+	background-size: cover;
+	background-position: 0 50%;
+	background-attachment: fixed;
+	color: rgba(255,255,255,1);
+	padding: 5%;
+}
+
+.estatuto-idoso h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.estatuto-idoso h1::after{
+	content: "";
+	width: 50px;
+	height: 3px;
+	display: flex;
+	background: rgba(0,150,150,1);
+	margin-top: 5px;
+}
+
+.estatuto-idoso i{
+	color: rgba(0,190,190,1);
+}
+
+.estatuto-idoso p{
+	width: 80%;
+	text-align: justify;
+}
+
+.estatuto-idoso p:nth-child(2){
+	margin-bottom: 40px;
+}
+
+.estatuto-idoso a{
+	width: 110px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background: rgba(0,150,150,1);
+	color: rgba(255,255,255,1);
+	border-radius: 2px;
+	margin-top: 40px;
+	transition: .3s all;
+}
+
+.estatuto-idoso a:hover{
+	background: rgba(0,190,190,1);
+}
+
+/*------------------------------- NOSSA CAUSA -------------------------------*/
+#nossa-causa{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 5%;
+}
+
+.nossa-causa h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.nossa-causa h1::after{
+	content: "";
+	width: 50px;
+	height: 3px;
+	display: flex;
+	background: rgba(0,150,150,1);
+	margin-top: 5px;
+}
+
+.nossa-causa p{
+	text-align: justify;
+	margin-bottom: 5%;
+}
+
+.nossa-causa .conteudo{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nossa-causa .motivos{
+	width: 65%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.nossa-causa .motivos .container{
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+
+.nossa-causa .motivos .container:nth-child(2){
+	margin: 50px 0; 
+}
+
+.nossa-causa .motivos .container .img{
+	width: 150px;
+	height: 150px;
+	background-size: 100% 100%!important;
+	border-radius: 100%;
+	filter: grayscale(100%);
+	transition: .3s all;
+}
+
+.nossa-causa .motivos .container:nth-child(1) .img{
+	background: url(../img/motivo-1.jpg);
+}
+
+.nossa-causa .motivos .container:nth-child(2) .img{
+	background: url(../img/motivo-2.jpg);
+}
+
+.nossa-causa .motivos .container:nth-child(3) .img{
+	background: url(../img/motivo-3.jpg);
+}
+
+.nossa-causa .motivos .container:hover .img{
+	filter: grayscale(0);
+}
+
+.nossa-causa .motivos .container .descricao{
+	width: 60%;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px
+}
+
+.nossa-causa .motivos .container .descricao h3{
+	font-size: 1.3rem;
+	color: rgba(0,150,150,1);
+	text-transform: uppercase;
+}
+
+.nossa-causa .motivos .container .descricao p{
+	font-size: 1rem;
+	text-align: justify;
+}
+
+.nossa-causa .beneficiado{
+	width: 35%;
+	height: 550px;
+}
+
+.nossa-causa .beneficiado .img{
+	width: 100%;
+	height: 250px;
+	background-size: cover!important;
+	background-position: 50%!important;
+	background-repeat: no-repeat!important;
+	margin: 50px 0;
+	overflow: hidden;
+	transition: .5s all;
+	border-radius: 5px;
+}
+
+.nossa-causa .beneficiado .img:nth-child(1){
+	margin-top: 0;
+	background: url(../img/idoso-1.jpg);
+}
+
+.nossa-causa .beneficiado .img:nth-child(2){
+	margin-bottom: 0;
+	background: url(../img/idoso-2.jpg);
+}
+
+.nossa-causa .beneficiado .descricao{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	background: rgba(0,150,150,1);
+	padding: 0 50px;
+	transform: translateY(-235%);
+	transition: .5s all
+}
+
+.nossa-causa .beneficiado .img:hover .descricao{
+	transform: translateY(0);
+}
+
+.nossa-causa .beneficiado .descricao h3{
+	font-size: 1.4rem;
+	color: rgba(51,51,51,1);
+	margin: 0;
+}
+
+.nossa-causa .beneficiado .descricao p{
+	font-size: .9rem;
+	color: rgba(255,255,255,1);
+	margin: 0;
+}
+
+/*------------------------------- INSTITUCIONAL -------------------------------*/
+#institucional{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background: url(../img/bg-institucional.jpg);
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 5%;
+
+}
+
+.institucional h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+
+.institucional h1::after{
+	content: "";
+	width: 50px;
+	height: 3px;
+	display: flex;
+	background: rgba(0,150,150,1);
+	margin-top: 5px;
+}
+
+.institucional .container{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.institucional .container .documentos{
+	width: 21.25%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	border-left: 2px solid rgba(0,0,0,.7);
+	border-right: 2px solid rgba(0,0,0,.7);
+	margin-left: 5%;
+	padding: 10px;
+	transition: .3s all;
+}
+
+.institucional .container .documentos:nth-child(1){
+	margin-left: 0;
+}
+
+.institucional .container .documentos:hover{
+	background: rgba(255,255,255,1);
+	border: none;
+}
+
+.institucional .container .documentos h3{
+	font-size: 1.5rem;
+	margin-bottom: 50px;
+}
+
+.institucional .container .documentos:hover h3{
+	color: rgba(0,150,150,1);
+}
+
+.institucional .container .documentos i{
+	font-size: 3rem;
+	margin-bottom: 50px;
+	transition: .3s all;
+}
+
+.institucional .container .documentos:hover i{
+	color: rgba(0,150,150,1);
+	transform: translateY(70px);
+}
+
+.institucional .container .documentos a{
+	color: rgba(0,0,0,1);
+	border-bottom: 2px solid rgba(0,0,0,0);
+	transition: .3s all;
+}
+
+.institucional .container .documentos:hover a{
+	color: rgba(0,150,150,1);
+	border-bottom: 2px solid rgba(0,150,150,1);
+	transform: translateY(-100px);
+}
+
+/*------------------------------- EVENTOS -------------------------------*/
+#eventos{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 5%;
+}
+
+.eventos h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+
+.eventos h1::after{
+	content: "";
+	width: 50px;
+	height: 3px;
+	display: flex;
+	background: rgba(0,150,150,1);
+	margin-top: 5px;
+}
+
+.eventos p{
+	text-align: justify;
+	margin-bottom: 5%;
+}
+
+.eventos .container{
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+
+.eventos .container .card{
+	width: 30%;
+	height: auto;
+	margin-right: 5%;
+}
+
+.eventos .container .card:nth-child(3){
+	margin-right: 0;
+}
+
+.eventos .container .card .card-image{
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background-size: cover!important;
+	background-position: center;
+}
+
+.eventos .container .card:nth-child(1) .card-image{
+	background: url(../img/card-bazar.jpg);
+}
+
+.eventos .container .card:nth-child(2) .card-image{
+	background: url(../img/card-bingo.jpg);
+}
+
+.eventos .container .card:nth-child(3) .card-image{
+	background: url(../img/card-rifa.jpg);
+}
+
+.eventos .container .card .card-content span{
+	font-weight: 400;
+}
+
+.eventos .container .card .card-reveal{
+	z-index: 1;
+}
+
+.eventos .container .card .card-reveal span{
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+/*------------------------------- COMUNICADOS -------------------------------*/
+#comunicados{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background: url(../img/bg-comunicados.jpg);
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 5%
+}
+
+.comunicados h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+
+.comunicados h1::after{
+	content: "";
+	width: 50px;
+	height: 3px;
+	display: flex;
+	background: rgba(0,150,150,1);
+	margin-top: 5px;
+}
+
+.comunicados .container{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+
+.comunicados .container .aviso{
+	width: 40%;
+	height: auto;
+}
+
+.comunicados .container .aviso:nth-child(1){
+	margin-right: 5%;
+}
+
+.comunicados .container .aviso:nth-child(2){
+	margin-left: 5%;
+}
+
+.comunicados .container .aviso h3{
+	font-size: 1.7rem;
+	color: rgba(0,150,150,1);
+}
+
+.comunicados .container .aviso p{
+	text-align: justify;
+}
+
+/*------------------------------- DOAÇÕES -------------------------------*/
+#doacoes{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	padding: 5%;
+}
+
+.doacoes h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+
+.doacoes h1::after{
+	content: "";
+	width: 50px;
+	height: 3px;
+	display: flex;
+	background: rgba(0,150,150,1);
+	margin-top: 5px;
+}
+
+.doacoes .conteudo{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.doacoes .conteudo .lista{
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid rgba(0,0,0,.3);
+	padding-right: 5%;
+}
+
+.doacoes .conteudo .lista p{
+	width: 100%;
+	text-align: justify;
+	margin-bottom: 5%;
+}
+
+.doacoes .conteudo .lista p:nth-child(1){
+	margin-bottom: 7%;
+}
+
+.doacoes .conteudo .lista p i{
+	color: rgba(0,150,150,1);
+}
+
+.doacoes .conteudo .monetaria{
+	width: 40%;
+	padding-left: 5%;
+}
+
+.doacoes .conteudo .monetaria p{
+	width: 100%;
+	text-align: justify;
+	margin-bottom: 5%;
+}
+
+.doacoes .conteudo .monetaria p:nth-child(1){
+	margin-bottom: 10%;
+}
+
+.doacoes .conteudo .monetaria p:nth-child(4){
+	margin-bottom: 20%;
+}
+
+.doacoes .conteudo .monetaria p:nth-child(5){
+	color: rgba(0,150,150,1);
+	text-align: left;
+	font-weight: 700;
+}
+
+.doacoes .conteudo .monetaria p i{
+	color: rgba(0,150,150,1);
+}
+
+/*------------------------------- CONTATOS -------------------------------*/
+#contatos{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	background: url(../img/bg-contatos.jpg);
+	background-size: cover;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 5%;
+}
+
+.contatos h1{
+	font-size: 2rem;
+	color: rgba(255,255,255,1);
+	text-transform: uppercase;
+	margin-bottom: 50px;
+}
+
+.contatos h1::after{
+	content: "";
+	width: 50px;
+	height: 3px;
+	display: flex;
+	background: rgba(0,150,150,1);
+	margin-top: 5px;
+}
+
+.contatos p{
+	color: rgba(255,255,255,.5);
+	margin: 50px 0 0 0;
+	text-align: center;
+}
+
+.contatos p:nth-child(5){
+	margin: 0;
+}
+
+.contatos p:nth-child(5) a{
+	color: rgba(0,200,200,1);
+	font-weight: 600;
+}
+
+.contatos .container{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* FORMULÁRIO */
+.contatos .container form{
+	width: 60%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid rgba(255,255,255,.3);
+	padding-right: 5%;
+	color: rgba(255,255,255,1);
+}
+
+.contatos .container form h3{
+	font-size: 1.4rem;
+	color: rgba(255,255,255,1);
+	font-weight: 300;
+	border-left: 3px solid rgba(0,150,150,1);
+	padding-left: 25px;
+}
+
+.contatos .container input[type=submit]{
+	font-size: 1.1rem;
+	color: rgba(255,255,255,1);
+	background: rgba(0,150,150,1);
+	border: none;
+	border-radius: 2px;
+	font-weight: 500;
+	margin-left: 50%;
+	padding: 10px 20px;
+	transform: translateX(-50%);
+}
+
+.contatos .container input:focus{
+	color: rgba(255,255,255,1);
+	outline: none;
+}
+
+.contatos .container textarea:focus{
+	color: rgba(255,255,255,1);
+	outline: none;
+}
+
+/* INFORMAÇÕES */
+.contatos .container .informacoes{
+	width: 40%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	padding-left: 5%;
+}
+
+.contatos .container .informacoes h3{
+	font-size: 1.4rem;
+	color: rgba(255,255,255,1);
+	font-weight: 300;
+	border-left: 3px solid rgba(0,150,150,1);
+	padding-left: 25px;
+}
+
+.contatos .container .informacoes .descricao{
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	border-bottom: 2px solid rgba(0,150,150,1);
+	background: rgba(0,0,0,.3);
+	margin-top: 25px;
+}
+
+.contatos .container .informacoes .descricao p{
+	color: rgba(255,255,255,.8);
+	margin: 0 0 0 25px;
+}
+
+.contatos .container .informacoes .descricao i{
+	font-size: 1.5rem;
+}
+
+.contatos .container .informacoes .descricao a{
+	color: rgba(255,255,255,.8);
+}
+
+/* LOCALIZAÇÃO */
+
+.contatos .localizacao{
+	width: 100%;
+	height: 500px;
+	margin-top: 5%;
+}
+
+.contatos .localizacao::after{
+	content: "";
+	width: 100%;
+	height: 1px;
+	display: flex;
+	background: rgba(255,255,255,.3);
+	margin-top: 25px;
+}
+
+.contatos .localizacao iframe{
+	width: 100%;
+	height: 100%;
+}
+
+/*------------------------------- MEDIAS -------------------------------*/
+@media (min-width: 1000px){
+	/*------------------------------- MENU -------------------------------*/
+	header .button-collapse{
+		display: none;
+	}
+}
+
+@media (max-width: 1210px){
+	/*------------------------------- NOSSA CAUSA -------------------------------*/
+	.nossa-causa .beneficiado .img{
+		background-size: 100% 100%;
+	}
+	.nossa-causa .beneficiado .img:hover{
+	background-position: 0 -30px; 
+}
+}
+
+@media (max-width: 1000px){
+	.home{
+		height: auto!important;
+		padding: 20% 0;
+	}
+	/*------------------------------- MENU -------------------------------*/
+	header .nav{
+		display: none;
+	}
+
+	/*------------------------------- QUEM SOMOS -------------------------------*/
+	.quem-somos .conteudo{
+		width: 100%;
+		margin-bottom: 5%;
+	}
+	.quem-somos .logo{
+		width: 100%;
+		margin-bottom: 5%;
+	}
+	.quem-somos .colaboradores .container .img .descricao{
+		padding: 0 60px;
+	}
+	.quem-somos .colaboradores .container .img .descricao h3{
+		font-size: 1.5rem;
+	}
+	.quem-somos .colaboradores .container .img .descricao p{
+		font-size: .9rem;
+		margin-bottom: 20px;
+	}
+	.quem-somos .colaboradores .container .img .descricao blockquote{
+		font-size: .95rem;
+		text-align: left;
+	}
+	/*------------------------------- NOSSA CAUSA -------------------------------*/
+	.nossa-causa .motivos{
+		width: 100%;
+	}
+	.nossa-causa .motivos .container .descricao{
+		width: 70%;
+	}
+	.nossa-causa .beneficiado{
+		width: 100%;
+		height: auto;
+		display: flex;
+	}
+	.nossa-causa .beneficiado .img{
+		width: 50%;
+	}
+	.nossa-causa .beneficiado .img:nth-child(1){
+		margin: 50px 0;
+		margin-right: 5%;
+	}
+	.nossa-causa .beneficiado .img:nth-child(2){
+		margin: 50px 0;
+	}
+
+	/*------------------------------- INSTITUCIONAL -------------------------------*/
+	.institucional .container .documentos{
+		width: 45%;
+		margin: 5% 0;
+	}
+	.institucional .container .documentos:nth-child(1){
+		margin-right: 10%;
+	}
+	.institucional .container .documentos:nth-child(3){
+		margin-right: 10%;
+	}
+
+	/*------------------------------- EVENTOS -------------------------------*/
+	.eventos .container{
+		flex-direction: column;
+	}
+	.eventos .container .card{
+		width: 100%;
+		margin: 5% 0;
+	}
+
+	/*------------------------------- COMUNICADOS -------------------------------*/
+	.comunicados .container .aviso{
+		width: 100%;
+		height: auto;
+	}
+	.comunicados .container .aviso:nth-child(1){
+		margin: 0;
+		margin-bottom: 5%;
+	}
+	.comunicados .container .aviso:nth-child(2){
+		margin: 0;
+	}
+
+	/*------------------------------- CONTATOS -------------------------------*/
+	.contatos .container form{
+		width: 100%;
+		padding: 0 0 50px 0;
+		border: none;
+	}
+
+	.contatos .container .informacoes{
+		width: 100%;
+		padding: 50px 0 0 0;
+	}
+}
+
+@media (max-width: 700px){
+	/*------------------------------- QUEM SOMOS -------------------------------*/
+	.quem-somos .colaboradores .container .img{
+		width: 100%;
+		margin-right: 0;
+	}
+	.quem-somos .colaboradores .container .img .descricao{
+		transform: translateX(-90%);
+	}
+	/*------------------------------- NOSSA CAUSA -------------------------------*/
+	.nossa-causa .motivos .container .img{
+		display: none;
+	}
+	.nossa-causa .motivos .container .descricao{
+		width: 90%;
+		height: auto;
+		margin: 0 5%;
+	}
+	.nossa-causa .beneficiado{
+		display: block;
+	}
+	.nossa-causa .beneficiado .img{
+		width: 100%;
+	}
+	.nossa-causa .beneficiado .img:nth-child(1){
+		margin: 50px 0;
+		margin-right: 5%;
+	}
+	.nossa-causa .beneficiado .img:nth-child(2){
+		margin: 50px 0;
+	}
+
+	/*------------------------------- INSTITUCIONAL -------------------------------*/
+	.institucional .container .documentos{
+		width: 80%;
+		margin: 5% 10%;
+	}
+	.institucional .container .documentos:nth-child(1){
+		margin: 5% 10%;
+	}
+
+	/*------------------------------- DOACOES -------------------------------*/
+	.doacoes .conteudo .lista{
+		width: 100%;
+		border-right: none;
+		border-bottom: 1px solid rgba(0,0,0,.3);
+		padding: 0 0 5% 0;
+	}
+	.doacoes .conteudo .monetaria{
+		width: 100%;
+		padding: 10% 0 0 0;
+	}
+	.doacoes .conteudo .monetaria p:nth-child(4){
+		margin-bottom: 5%;
+	}
+}
+
+@media (max-device-width: 800px){
+	body p{
+		font-weight: 300!important;
+	}
+}
+
+/*------------------------------- KEYFRAMES -------------------------------*/
+@keyframes btn-home{
+	from{
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes btn-form{
+	from{
+		padding-bottom: 10px;
+	}
+}
